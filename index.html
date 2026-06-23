@@ -164,6 +164,26 @@
         .photos-grid img:hover { transform: scale(1.02); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
         .photos-grid img:last-child:nth-child(odd) { grid-column: span 2; }
 
+        /* ── Videos ── */
+        .videos { padding: 56px 0 8px; }
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-top: 0;
+        }
+        .videos-grid video {
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            object-fit: cover;
+            border-radius: 14px;
+            background: #000;
+            box-shadow: 0 3px 14px rgba(0,0,0,0.12);
+        }
+        @media (max-width: 560px) {
+            .videos-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
+        }
+
         /* ── Amenities ── */
         .amenities { padding: 56px 0; background: white; }
         .amenities-grid {
@@ -289,6 +309,23 @@
             <img src="photos/photo2.jpg" alt="Фото">
             <img src="photos/photo3.jpg" alt="Фото">
             <img src="photos/photo4.jpg" alt="Фото">
+            <img src="photos/photo5.jpg" alt="Фото">
+            <img src="photos/photo6.jpg" alt="Фото">
+        </div>
+    </div>
+</section>
+
+<section class="videos">
+    <div class="container">
+        <h2 class="section-title fade-up">Видео базы</h2>
+        <p class="section-sub fade-up">Посмотрите, как у нас на самом деле</p>
+        <div class="videos-grid">
+            <video class="fade-up" controls preload="metadata" playsinline poster="videos/poster1.jpg">
+                <source src="videos/video1.mp4" type="video/mp4">
+            </video>
+            <video class="fade-up" controls preload="metadata" playsinline poster="videos/poster2.jpg">
+                <source src="videos/video2.mp4" type="video/mp4">
+            </video>
         </div>
     </div>
 </section>
